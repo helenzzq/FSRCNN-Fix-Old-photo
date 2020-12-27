@@ -3,7 +3,7 @@ import torch.nn as nn
 
 
 class FSRCNNModel(torch.nn.Module):
-    def __init__(self, channel_num, upscale_factor, d=64, s=12, m=4):
+    def __init__(self, channel_num, upscale_factor, d=64, s=16, m=3):
         super(FSRCNNModel, self).__init__()
         # Set the argument for first 3 convolution layers
         convolution_augment = [(channel_num, d, 5, 1, 2), (d, s, 1, 1, 0), (s, d, 1, 1, 0)]
