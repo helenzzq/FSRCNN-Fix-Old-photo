@@ -4,7 +4,7 @@ from os import listdir
 from torchvision.transforms import Compose, CenterCrop, ToTensor, Resize
 import torch.utils.data as data
 
-DATA_PATH = "dataset/Div2k"
+DATA_PATH = "dataset"
 
 """
 Div2k DataSet Reference
@@ -18,7 +18,20 @@ Div2k DataSet Reference
 Type: DataSet
 Link: https://data.vision.ee.ethz.ch/cvl/DIV2K/
 """
-
+# Licence to BSD300
+"""
+InProceedings{MartinFTM01,
+  author = {D. Martin and C. Fowlkes and D. Tal and J. Malik},
+  title = {A Database of Human Segmented Natural Images and its
+           Application to Evaluating Segmentation Algorithms and
+           Measuring Ecological Statistics},
+  booktitle = {Proc. 8th Int'l Conf. Computer Vision},
+  year = {2001},
+  month = {July},
+  volume = {2},
+  pages = {416--423}
+}
+"""
 
 class DatasetLoader(data.Dataset):
     def __init__(self, dir, upscale_f):
