@@ -9,7 +9,7 @@ class Augment:
         # Set model
         self.parser.add_argument('--model', '-m', type=str, default='fsrcnn')
         # number of epochs for training
-        self.parser.add_argument('--epochs', type=int, default=20)
+        self.parser.add_argument('--epochs', type=int, default=180)
         # upscale factor
         self.parser.add_argument('--upscale_factor', '-uf', type=int, default=4)
         # learning rate
@@ -23,6 +23,4 @@ class Augment:
 
     def set_test_augment(self):
         self.parser.add_argument('--model', type=str, default='model_path.pth')
-        self.parser.add_argument('--output', type=str, default='output.jpg')
-        self.parser.add_argument('--input', type=str, required=False, default='dataset/Div2k/validate/twinSis.png',
-                            help='input image to use')
+        self.parser.add_argument('--output_result', type=str, default='output_result.jpg')
